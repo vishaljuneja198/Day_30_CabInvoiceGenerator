@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class InvoiceServiceTest {
     InvoiceGenerator invoiceGenerator;
 
+
+
     @Test
     public void givenDistanceAndTime_ShouldReturnTotalFare() {
         invoiceGenerator = new InvoiceGenerator();
