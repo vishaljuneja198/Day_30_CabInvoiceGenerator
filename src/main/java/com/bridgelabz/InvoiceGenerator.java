@@ -31,4 +31,18 @@ public class InvoiceGenerator {
         }
         return new InvoiceSummary(rides.length, totalFare);
     }
+
+    public InvoiceGenerator() {
+        this.rideRepository = new RideRepository();
+    }
+
+    public void addRides(String userId, Ride[] ride) {
+        rideRepository.addRide(userId, ride);
+    }
+
+
+    public double getInvoiceSummary(String userId) {
+        return this.calculateFare(rideRepository.getRides(userId));
+
+    }
 }
